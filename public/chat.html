@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Developer Room App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="head">
+        <div class="chat-header">
+          <h1>Room</h1>
+          <a href="index.html" class="btn"
+            >Leave room<i
+              class="fa-sharp fa-solid fa-arrow-right-from-bracket leave-icon"
+            ></i
+          ></a>
+        </div>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3>
+            <i class="fa-sharp fa-solid fa-comments chat-icon"></i>Room Name:
+          </h3>
+          <h2 id="room-name"></h2>
+          <h3>User</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn">
+            <i class="fa-sharp fa-solid fa-paper-plane paper-icon"></i>Send
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js"></script>
+    <!-- To use the socket library we need to setup it at our front end with the script below that will give us acces to the front end library  -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5f32a67548.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
